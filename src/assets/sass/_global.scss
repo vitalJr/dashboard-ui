@@ -1,0 +1,5 @@
+// Colors
+$primary-color: #cc455e;
+$text-color: #151515;
+$primary-color--dark: darken($primary-color, 10);
+$primary-color--light: transparentize(lighten($primary-color, 40), 0.25);

@@ -1,0 +1,86 @@
+@import 'src/assets/sass/global';
+@import 'src/assets/sass/abstracts/mixins';
+
+button.button {
+  appearance: none;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+  height: 40px;
+  border-radius: 50px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 120ms ease-in-out, color 120ms ease-in-out,
+    border-color 120ms ease-in-out;
+
+  @include mq('sm', min) {
+    font-size: 1.4rem;
+  }
+}
+
+.button-primary {
+  background-color: #cc455e;
+  color: white;
+  border: none;
+  &:hover {
+    background-color: #c7808e;
+    color: #252627;
+  }
+}
+
+.button-secundary {
+  background-color: #2e3bac;
+  color: white;
+  border: none;
+  &:hover {
+    background-color: #868fe3;
+    color: #252627;
+  }
+}
+
+.button-terciary {
+  background-color: #1f8e3b;
+  color: white;
+  border: none;
+  &:hover {
+    background-color: #5dbd75;
+    color: #252627;
+  }
+}
+
+.button-quaternary {
+  background: transparent;
+  border: 2px solid #252627;
+  color: #252627;
+  &:hover {
+    border-color: #252627;
+    color: #252627;
+  }
+}
+button.button.button-outlined {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+
+  &:hover {
+    border-color: #252627;
+    color: #252627;
+  }
+}
+button.button.button-small {
+  max-width: 160px;
+}
+button.button.button-medium {
+  max-width: 200px;
+}
+button.button.button-large {
+  max-width: 240px;
+}
+button.button.button-full {
+  max-width: unset;
+}
+button.button.button-disabled {
+  background: #ccc;
+}

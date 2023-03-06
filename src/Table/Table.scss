@@ -1,0 +1,33 @@
+$contrast_color: rgb(153 153 153 / 20%);
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
+  thead tr {
+    background-color: $contrast_color;
+    position: relative;
+
+    th {
+      text-transform: uppercase;
+      font-weight: bolder;
+      position: sticky;
+      top: 0;
+      resize: horizontal;
+      overflow: auto;
+      min-width: 70px;
+    }
+  }
+
+  th,
+  td {
+    color: #2d3047;
+    font-family: 'Inter', 'Roboto', 'Arial', sans-serif;
+    font-size: 12px;
+    padding: 14px 28px;
+  }
+
+  tr:not(:last-child) td {
+    border-bottom: 1px solid $contrast_color;
+  }
+}

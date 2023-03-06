@@ -1,0 +1,28 @@
+@import 'src/assets/sass/abstracts/mixins';
+@import 'src/assets/sass/global';
+
+.ellipse {
+  position: relative;
+  z-index: 100;
+  display: inline-block;
+  @include glassmohphize(var(--primary-color));
+  opacity: 0.25;
+  border-radius: 100%;
+
+  &.ellipse-large {
+    width: calc(4vmax + 99px);
+    height: calc(4vmax + 99px);
+  }
+  &.ellipse-medium {
+    width: calc(3vmax + 66px);
+    height: calc(3vmax + 66px);
+  }
+  &.ellipse-small {
+    width: calc(2vmax + 44px);
+    height: calc(2vmax + 44px);
+  }
+  &.ellipse-mini {
+    width: calc(1vmax + 22px);
+    height: calc(1vmax + 22px);
+  }
+}

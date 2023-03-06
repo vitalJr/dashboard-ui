@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "noEmit": false,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "sourceMap": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationDir": "dist",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "types": ["react", "react-dom", "jest", "@testing-library/jest-dom"],
+    "baseUrl": "src"
+  },
+  "files": ["src/index.d.ts"],
+  "include": ["src/**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/**/*.stories.tsx",
+    "src/**/*.test.tsx"
+  ]
+}

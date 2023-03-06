@@ -1,0 +1,59 @@
+$abled-color: #109877;
+$disabled-color: #999999;
+
+.pagination {
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    border-radius: 100%;
+    display: inline-block;
+    border: none;
+    background: $abled-color;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: background-color 120ms ease;
+
+    &:hover {
+      background-color: darken($abled-color, 5);
+    }
+
+    &:disabled {
+      background-color: $disabled-color;
+
+      &:hover {
+        background-color: lighten($disabled-color, 10);
+      }
+    }
+
+    &-icon {
+      cursor: pointer;
+
+      &--left::after {
+        border-right: 9px solid #fff;
+        left: calc(50% - 1px);
+      }
+      &--right::after {
+        border-left: 9px solid #fff;
+        left: calc(50% + 1px);
+      }
+
+      &::after {
+        content: '';
+        border-bottom: 6px solid transparent;
+        border-top: 6px solid transparent;
+        display: block;
+        top: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__info {
+    font-family: 'Inter', sans-serif;
+    margin: 0 16px;
+  }
+}
